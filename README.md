@@ -1,5 +1,7 @@
 # 🕌 Arab Mentor — Interaktiv Arab Tili O'rganish Ilovasi
 
+> **Powered by MNSM — AI Specialist** ✦ Artificial Intelligence Solutions
+>
 > Android va iOS uchun mo'ljallangan, Islamic Art uslubidagi to'liq interaktiv arab tili o'rganish ilovasi.
 
 Mukammal arab grammatikasini (Nahv, Sarf, Tarkib) **0 dan mukammallikkacha** o'rgatuvchi mobile ilova. MIT'ning *Mastery-Based Learning* va *Differential Learning* metodikalari asosida.

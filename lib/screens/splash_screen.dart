@@ -99,9 +99,98 @@ class _SplashScreenState extends State<SplashScreen> {
                   color: AppColors.softBrown,
                 ),
               ).animate().fadeIn(delay: 1400.ms, duration: 800.ms),
+              const Spacer(),
+              const _PoweredByMnsm(),
+              const SizedBox(height: 24),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _PoweredByMnsm extends StatelessWidget {
+  const _PoweredByMnsm();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          'POWERED BY',
+          style: GoogleFonts.merriweather(
+            fontSize: 9,
+            letterSpacing: 3,
+            color: AppColors.softBrown.withOpacity(0.6),
+          ),
+        ),
+        const SizedBox(height: 6),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+              color: const Color(0xFFC0C0C0).withOpacity(0.5),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFFC0C0C0).withOpacity(0.15),
+                blurRadius: 12,
+                spreadRadius: 1,
+              ),
+            ],
+          ),
+          child: SizedBox(
+            height: 36,
+            child: _MnsmLogoOrFallback(),
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          'AI SPECIALIST',
+          style: GoogleFonts.merriweather(
+            fontSize: 9,
+            letterSpacing: 3,
+            color: AppColors.softBrown.withOpacity(0.7),
+          ),
+        ),
+      ],
+    ).animate().fadeIn(delay: 2000.ms, duration: 800.ms);
+  }
+}
+
+class _MnsmLogoOrFallback extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(
+      'assets/images/mnsm_logo.png',
+      fit: BoxFit.contain,
+      errorBuilder: (_, __, ___) => Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ShaderMask(
+            shaderCallback: (rect) => const LinearGradient(
+              colors: [
+                Color(0xFFE8E8E8),
+                Color(0xFFC0C0C0),
+                Color(0xFF888888),
+                Color(0xFFE8E8E8),
+              ],
+            ).createShader(rect),
+            child: Text(
+              'MNSM',
+              style: GoogleFonts.cinzel(
+                fontSize: 22,
+                letterSpacing: 6,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

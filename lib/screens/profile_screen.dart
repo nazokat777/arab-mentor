@@ -192,6 +192,8 @@ class ProfileScreen extends StatelessWidget {
                   textDirection: TextDirection.rtl,
                 ),
               ),
+              const SizedBox(height: 24),
+              const _MnsmCredit(),
               const SizedBox(height: 20),
             ],
           ),
@@ -222,6 +224,95 @@ class ProfileScreen extends StatelessWidget {
               Navigator.pop(context);
             },
             child: const Text('Tozalash'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _MnsmCredit extends StatelessWidget {
+  const _MnsmCredit();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Color(0xFF1A1A1A), Color(0xFF0A0A0A)],
+        ),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: const Color(0xFFC0C0C0).withOpacity(0.4),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFFC0C0C0).withOpacity(0.15),
+            blurRadius: 16,
+            spreadRadius: 1,
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          Text(
+            'DEVELOPED BY',
+            style: GoogleFonts.merriweather(
+              fontSize: 10,
+              letterSpacing: 4,
+              color: const Color(0xFFC0C0C0).withOpacity(0.7),
+            ),
+          ),
+          const SizedBox(height: 10),
+          SizedBox(
+            height: 70,
+            child: Image.asset(
+              'assets/images/mnsm_logo.png',
+              fit: BoxFit.contain,
+              errorBuilder: (_, __, ___) => Center(
+                child: ShaderMask(
+                  shaderCallback: (rect) => const LinearGradient(
+                    colors: [
+                      Color(0xFFE8E8E8),
+                      Color(0xFFC0C0C0),
+                      Color(0xFF888888),
+                      Color(0xFFE8E8E8),
+                    ],
+                  ).createShader(rect),
+                  child: Text(
+                    'MNSM',
+                    style: GoogleFonts.cinzel(
+                      fontSize: 36,
+                      letterSpacing: 10,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'AI SPECIALIST',
+            style: GoogleFonts.merriweather(
+              fontSize: 11,
+              letterSpacing: 5,
+              color: const Color(0xFFC0C0C0),
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            'Artificial Intelligence Solutions',
+            style: GoogleFonts.merriweather(
+              fontSize: 9,
+              letterSpacing: 1,
+              fontStyle: FontStyle.italic,
+              color: const Color(0xFFC0C0C0).withOpacity(0.6),
+            ),
           ),
         ],
       ),
