@@ -7,6 +7,7 @@ import '../services/progress_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/geometric_pattern.dart';
 import '../widgets/stat_widgets.dart';
+import 'settings_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -34,7 +35,15 @@ class ProfileScreen extends StatelessWidget {
                     onPressed: () => Navigator.maybePop(context),
                   ),
                   const SizedBox(width: 8),
-                  Text('Profil', style: AppTheme.uzbekTitle),
+                  Expanded(child: Text('Profil', style: AppTheme.uzbekTitle)),
+                  IconButton(
+                    icon: const Icon(Icons.settings, color: AppColors.emerald),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => const SettingsScreen()),
+                    ),
+                  ),
                 ],
               ),
               const SizedBox(height: 16),
@@ -169,17 +178,6 @@ class ProfileScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 24),
-              OutlinedButton.icon(
-                onPressed: () => _confirmReset(context, service),
-                icon: const Icon(Icons.restart_alt),
-                label: const Text('Statistikani tozalash'),
-                style: OutlinedButton.styleFrom(
-                  foregroundColor: AppColors.deepRed,
-                  side: const BorderSide(color: AppColors.deepRed),
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                ),
-              ),
               const SizedBox(height: 20),
               const OrnamentDivider(),
               Center(
@@ -202,33 +200,6 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  void _confirmReset(BuildContext context, ProgressService service) {
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        backgroundColor: AppColors.ivory,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20)),
-        title: const Text('Tozalashga ishonchingiz komilmi?'),
-        content: const Text(
-            'Barcha XP, daraja va o\'rganilgan so\'zlar o\'chiriladi.'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Bekor qilish'),
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: AppColors.deepRed),
-            onPressed: () {
-              service.reset();
-              Navigator.pop(context);
-            },
-            child: const Text('Tozalash'),
-          ),
-        ],
-      ),
-    );
-  }
 }
 
 class _MnsmCredit extends StatelessWidget {

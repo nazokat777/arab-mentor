@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../theme/app_theme.dart';
 import '../widgets/geometric_pattern.dart';
 import 'home_screen.dart';
+import 'onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,12 +17,15 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(milliseconds: 2800), () {
+    Future.delayed(const Duration(milliseconds: 2800), () async {
+      if (!mounted) return;
+      final onboardingDone = await OnboardingScreen.isDone();
       if (!mounted) return;
       Navigator.pushReplacement(
         context,
         PageRouteBuilder(
-          pageBuilder: (_, a, __) => const HomeScreen(),
+          pageBuilder: (_, a, __) =>
+              onboardingDone ? const HomeScreen() : const OnboardingScreen(),
           transitionsBuilder: (_, a, __, child) =>
               FadeTransition(opacity: a, child: child),
           transitionDuration: const Duration(milliseconds: 600),

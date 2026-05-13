@@ -390,6 +390,396 @@ Arab tilida gap **2 turga** bo\'linadi:
         ),
       ],
     ),
+    Lesson(
+      id: 'sarf_03',
+      title: 'Ma\'rifa va Nakira',
+      arabicTitle: 'المَعْرِفَةُ وَالنَّكِرَةُ',
+      description: 'Aniq va noaniq ismlar',
+      category: LessonCategory.sarf,
+      level: 2,
+      source: 'D. N. Bodariy — Mukammal Sarf',
+      theory: '''
+Arab tilida har bir ism **2 holatdan birida** keladi:
+
+🔵 **Ma'rifa (المَعْرِفَة)** — **aniq** ism
+   - **الـ (al-)** prefiksi qo'shiladi
+   - Tinvin (ـٌ) tushadi
+   - Misol: **الكِتَابُ** (bu kitob — aniq)
+
+🔴 **Nakira (النَّكِرَة)** — **noaniq** ism
+   - **الـ** yo'q
+   - **Tinvin** (ـٌ, ـً, ـٍ) bo'ladi
+   - Misol: **كِتَابٌ** (bir kitob — noaniq)
+
+**Ma'rifaning 6 turi:**
+1. **Ism** (ism alam): مُحَمَّدٌ
+2. **Zamir**: أَنَا, هُوَ
+3. **Ishora ismlari**: هَذَا, ذَلِكَ
+4. **Mavsul**: الَّذِي, الَّتِي
+5. **Al + ism**: الكِتَابُ
+6. **Izafat** (idafa): كِتَابُ الطَّالِبِ
+
+💡 *Asosiy farq:*
+   - **كِتَابٌ** = bir kitob (qaysidir)
+   - **الكِتَابُ** = (o'sha) kitob
+''',
+      examples: [
+        Example(
+          arabic: 'كِتَابٌ — الكِتَابُ',
+          transliteration: 'kitābun — al-kitābu',
+          translation: 'bir kitob — (o\'sha) kitob',
+        ),
+        Example(
+          arabic: 'بَيْتٌ — البَيْتُ',
+          transliteration: 'baytun — al-baytu',
+          translation: 'bir uy — (o\'sha) uy',
+        ),
+        Example(
+          arabic: 'كِتَابُ الطَّالِبِ',
+          transliteration: 'kitābu aṭ-ṭālibi',
+          translation: 'talabaning kitobi',
+          grammarNote: 'Izafat — birinchi so\'z ham ma\'rifa hisoblanadi',
+        ),
+      ],
+      vocabulary: const [],
+      quizzes: const [
+        Quiz(
+          question: '"البَيْتُ" qaysi holatda?',
+          options: ['Nakira', 'Ma\'rifa', 'Ikkalasi', 'Aniq emas'],
+          correctIndex: 1,
+          explanation: 'الـ prefiksi bor — demak ma\'rifa (aniq).',
+        ),
+        Quiz(
+          question: '"قَلَمٌ" — bu qanday ism?',
+          options: ['Ma\'rifa', 'Nakira', 'Izafat', 'Zamir'],
+          correctIndex: 1,
+          explanation: 'Tinvin (ـٌ) bor, الـ yo\'q — nakira (noaniq).',
+        ),
+        Quiz(
+          question: '"هَذَا" qaysi ma\'rifa turiga kiradi?',
+          options: ['Zamir', 'Ishora ismi', 'Mavsul', 'Al + ism'],
+          correctIndex: 1,
+          explanation: 'هَذَا — "bu" ma\'nosini bildiruvchi ishora ismi.',
+        ),
+      ],
+    ),
+    Lesson(
+      id: 'nahv_03',
+      title: 'Izafat (Idafa)',
+      arabicTitle: 'الإِضَافَةُ',
+      description: 'Egalik aloqasi (kim+kimning)',
+      category: LessonCategory.nahv,
+      level: 3,
+      source: 'S. Bekpo\'lat — Mabdaun Nahv',
+      theory: '''
+**Izafat (الإِضَافَة)** — ikki ismni birlashtirib egalik aloqasini bildirish.
+
+**Tarkibi:**
+🟢 **Muzof (المُضَاف)** — egalik qiluvchi (birinchi ism)
+🟡 **Muzof ilayh (المُضَافُ إِلَيْه)** — egalik (ikkinchi ism)
+
+**Qoidalar:**
+
+1. **Muzof:**
+   - الـ ham, tinvin ham bo'lmaydi
+   - Holatga ko'ra harakatlanadi (marfu', mansub, majrur)
+
+2. **Muzof ilayh:**
+   - Doim **majrur** (kasra — ـِ)
+   - Ma'rifa yoki nakira bo'lishi mumkin
+
+**Misol:**
+**كِتَابُ الطَّالِبِ** = "talabaning kitobi"
+- كِتَابُ ← Muzof (marfu')
+- الطَّالِبِ ← Muzof ilayh (majrur)
+
+**Eslatma:** Muzof ham **ma'rifa** hisoblanadi, agar Muzof ilayh ma'rifa bo'lsa.
+''',
+      examples: [
+        Example(
+          arabic: 'بَيْتُ المُعَلِّمِ',
+          transliteration: 'baytu al-muʿallimi',
+          translation: 'o\'qituvchining uyi',
+          grammarNote: 'بَيْتُ — Muzof, المُعَلِّمِ — Muzof ilayh (majrur)',
+        ),
+        Example(
+          arabic: 'بَابُ المَدْرَسَةِ',
+          transliteration: 'bābu al-madrasati',
+          translation: 'maktabning eshigi',
+        ),
+        Example(
+          arabic: 'قَلَمُ الطَّالِبِ جَدِيدٌ',
+          transliteration: 'qalamu aṭ-ṭālibi jadīdun',
+          translation: 'Talabaning qalami yangi',
+          grammarNote: 'Izafat + Mubtado, keyin Xabar',
+        ),
+      ],
+      vocabulary: const [],
+      quizzes: const [
+        Quiz(
+          question: '"كِتَابُ المُعَلِّمِ" — bu qaysi tuzilma?',
+          arabicSentence: 'كِتَابُ المُعَلِّمِ',
+          options: [
+            'Mubtado + Xabar',
+            'Fe\'l + Foil',
+            'Izafat (Muzof + Muzof ilayh)',
+            'Sifat + Mavsuf',
+          ],
+          correctIndex: 2,
+          explanation:
+              'Ikki ism birlashgan, Muzof ilayh majrur — bu Izafat.',
+        ),
+        Quiz(
+          question: 'Muzof ilayh qaysi holatda bo\'ladi?',
+          options: ['Marfu\' (ـُ)', 'Mansub (ـَ)', 'Majrur (ـِ)', 'Sukun'],
+          correctIndex: 2,
+          explanation: 'Muzof ilayh doim majrur (kasra) bo\'ladi.',
+        ),
+      ],
+    ),
+    Lesson(
+      id: 'sarf_04',
+      title: 'Fe\'l Mozi va Muzore\'',
+      arabicTitle: 'الفِعْلُ المَاضِي وَالمُضَارِعُ',
+      description: 'O\'tgan va hozirgi/kelasi zamon fe\'llari',
+      category: LessonCategory.sarf,
+      level: 3,
+      source: 'D. N. Bodariy — Mukammal Sarf',
+      theory: '''
+Arab tilida fe'l **3 zamonga** bo'linadi, lekin asosan 2 tasi:
+
+📘 **1. Fe'l Mozi (الفِعْلُ المَاضِي)** — o'tgan zamon
+   - **Allaqachon bo'lib bo'lgan** ish
+   - Misol: **كَتَبَ** (yozdi), **قَرَأَ** (o'qidi)
+
+📗 **2. Fe'l Muzore' (الفِعْلُ المُضَارِع)** — hozirgi/kelasi zamon
+   - Hozir bo'layotgan yoki kelajakda bo'ladigan ish
+   - **يـ, تـ, أ, نـ** harflaridan biri bilan boshlanadi
+   - Misol: **يَكْتُبُ** (yozadi), **يَقْرَأُ** (o'qiydi)
+
+**Muzore' boshi harflari (إِنْتَ نَأْتِي):**
+- **أَ** — men (مَتَكَلِّم وَحْدَهُ): **أَكْتُبُ** (men yozaman)
+- **نَ** — biz (مَعَ الغَيْر): **نَكْتُبُ** (biz yozamiz)
+- **تَ** — sen, u (ay.): **تَكْتُبُ**
+- **يَ** — u (er.): **يَكْتُبُ**
+
+**Misol jadval:**
+| Zamir | Mozi | Muzore' |
+|-------|------|---------|
+| أَنَا | كَتَبْتُ | أَكْتُبُ |
+| نَحْنُ | كَتَبْنَا | نَكْتُبُ |
+| أَنْتَ | كَتَبْتَ | تَكْتُبُ |
+| هُوَ | كَتَبَ | يَكْتُبُ |
+| هِيَ | كَتَبَتْ | تَكْتُبُ |
+''',
+      examples: [
+        Example(
+          arabic: 'كَتَبَ الطَّالِبُ',
+          transliteration: 'kataba aṭ-ṭālibu',
+          translation: 'Talaba yozdi (o\'tgan)',
+        ),
+        Example(
+          arabic: 'يَكْتُبُ الطَّالِبُ',
+          transliteration: 'yaktubu aṭ-ṭālibu',
+          translation: 'Talaba yozyapti / yozadi (hozir)',
+        ),
+        Example(
+          arabic: 'أَدْرُسُ اللُّغَةَ العَرَبِيَّةَ',
+          transliteration: 'adrusu al-lughata al-ʿarabiyyata',
+          translation: 'Men arab tilini o\'rganaman',
+          grammarNote: 'Muzore\' + أ prefiks = men',
+        ),
+      ],
+      vocabulary: const [],
+      quizzes: const [
+        Quiz(
+          question: '"يَقْرَأُ" qaysi zamon?',
+          options: ['Mozi', 'Muzore\'', 'Amr', 'Hech qaysi'],
+          correctIndex: 1,
+          explanation: 'يَ bilan boshlangan — Muzore\' (hozirgi/kelasi).',
+        ),
+        Quiz(
+          question: '"Men yozaman" arab tilida qanday?',
+          options: ['كَتَبْتُ', 'أَكْتُبُ', 'يَكْتُبُ', 'نَكْتُبُ'],
+          correctIndex: 1,
+          explanation:
+              'أَ — men (mutakallim) prefiksi. أَكْتُبُ = men yozaman.',
+        ),
+        Quiz(
+          question: '"كَتَبَتْ" qaysi zamir uchun?',
+          options: ['هُوَ (u er.)', 'هِيَ (u ay.)', 'أَنْتَ', 'نَحْنُ'],
+          correctIndex: 1,
+          explanation: 'تْ qo\'shimchasi — muannas (u ayol kishi).',
+        ),
+      ],
+    ),
+    Lesson(
+      id: 'tarkib_02',
+      title: 'I\'rob darajalari',
+      arabicTitle: 'حَرَكَاتُ الإِعْرَابِ',
+      description: 'Marfu\', Mansub, Majrur, Majzum',
+      category: LessonCategory.tarkib,
+      level: 3,
+      source: 'TIU — Tarkib qoidalari',
+      theory: '''
+**I'rob (الإِعْرَاب)** — so'z oxiridagi harakatning gapdagi rolga qarab o'zgarishi.
+
+**4 ta asosiy holat:**
+
+🟢 **1. Marfu' (المَرْفُوع)** — damma (ـُ)
+   - **Kim ish bajaradi:** Mubtado, Xabar, Foil
+   - Misol: **الطَّالِبُ** (talaba — kim?)
+
+🟡 **2. Mansub (المَنْصُوب)** — fatha (ـَ)
+   - **Kim/nimani:** Maf'ul bih (ob'ekt)
+   - Misol: **الكِتَابَ** (kitobni — nimani?)
+
+🔴 **3. Majrur (المَجْرُور)** — kasra (ـِ)
+   - **Harf jarr bilan** yoki **Muzof ilayh**
+   - Misol: **فِي البَيْتِ** (uyda)
+
+⚫ **4. Majzum (المَجْزُوم)** — sukun (ـْ)
+   - Faqat **fe'l muzore'**da (لَمْ, لَا nahy)
+   - Misol: **لَمْ يَكْتُبْ** (yozmadi)
+
+**Tahlil namunasi:**
+> كَتَبَ الطَّالِبُ الدَّرْسَ فِي البَيْتِ
+
+| So'z | Rol | I'rob |
+|------|-----|-------|
+| كَتَبَ | Fe'l | — |
+| الطَّالِبُ | Foil | Marfu' (ـُ) |
+| الدَّرْسَ | Maf'ul bih | Mansub (ـَ) |
+| البَيْتِ | Majrur (harf jarr keyin) | Majrur (ـِ) |
+''',
+      examples: [
+        Example(
+          arabic: 'الطَّالِبُ ← marfu\'',
+          transliteration: 'aṭ-ṭālibu',
+          translation: 'talaba (foil — kim?)',
+        ),
+        Example(
+          arabic: 'الدَّرْسَ ← mansub',
+          transliteration: 'ad-darsa',
+          translation: 'darsni (maf\'ul bih — nimani?)',
+        ),
+        Example(
+          arabic: 'فِي البَيْتِ ← majrur',
+          transliteration: 'fī al-bayti',
+          translation: 'uyda (harf jarr + ism)',
+        ),
+      ],
+      vocabulary: const [],
+      quizzes: const [
+        Quiz(
+          question: 'Foil qaysi i\'robda bo\'ladi?',
+          options: ['Marfu\'', 'Mansub', 'Majrur', 'Majzum'],
+          correctIndex: 0,
+          explanation: 'Foil — ish bajaruvchi, doim marfu\' (damma).',
+        ),
+        Quiz(
+          question: 'Maf\'ul bih qanday harakat oladi?',
+          options: ['Damma (ـُ)', 'Fatha (ـَ)', 'Kasra (ـِ)', 'Sukun'],
+          correctIndex: 1,
+          explanation: 'Maf\'ul bih mansub bo\'ladi — fatha (ـَ).',
+        ),
+        Quiz(
+          question: '"فِي" dan keyingi ism qaysi holatda?',
+          options: ['Marfu\'', 'Mansub', 'Majrur', 'Majzum'],
+          correctIndex: 2,
+          explanation:
+              'فِي — harf jarr. Undan keyingi ism doim majrur (kasra).',
+        ),
+        Quiz(
+          question:
+              '"قَرَأَ الطَّالِبُ الكِتَابَ" — الكِتَابَ qaysi rolda?',
+          arabicSentence: 'قَرَأَ الطَّالِبُ الكِتَابَ',
+          options: ['Foil', 'Maf\'ul bih', 'Mubtado', 'Xabar'],
+          correctIndex: 1,
+          explanation:
+              'Fatha (ـَ) bilan kelgan, o\'qilgan narsa — Maf\'ul bih.',
+        ),
+      ],
+    ),
+    Lesson(
+      id: 'nahv_04',
+      title: 'Sifat va Mavsuf',
+      arabicTitle: 'الصِّفَةُ وَالمَوْصُوفُ',
+      description: 'Belgi va belgilanmish',
+      category: LessonCategory.nahv,
+      level: 3,
+      source: 'S. Bekpo\'lat — Mabdaun Nahv',
+      theory: '''
+**Sifat (الصِّفَة)** — ismning belgisini bildiruvchi so'z.
+**Mavsuf (المَوْصُوف)** — sifatlanayotgan ism.
+
+**Asosiy qoida:** Sifat 4 jihatdan Mavsufga **mos kelishi** shart:
+
+1. **Jins** (muzakkar/muannas)
+2. **Son** (mufrad/musanno/jam')
+3. **Ma'rifa/Nakira**
+4. **I'rob** (marfu'/mansub/majrur)
+
+**Misollar:**
+
+✅ **رَجُلٌ كَبِيرٌ** — katta erkak
+   - Mavsuf: رَجُلٌ (nakira, mufrad, muzakkar, marfu')
+   - Sifat: كَبِيرٌ (xuddi shunday)
+
+✅ **الرَّجُلُ الكَبِيرُ** — (o'sha) katta erkak
+   - Ikkalasi ham ma'rifa (الـ bilan)
+
+✅ **اِمْرَأَةٌ جَمِيلَةٌ** — chiroyli ayol
+   - Ikkalasi muannas (ة bilan)
+
+❌ **رَجُلٌ كَبِيرَةٌ** — XATO!
+   - Jins mos kelmaydi (er.+ay.)
+''',
+      examples: [
+        Example(
+          arabic: 'الكِتَابُ الجَدِيدُ',
+          transliteration: 'al-kitābu al-jadīdu',
+          translation: 'yangi kitob',
+          grammarNote: 'Ikkalasi: ma\'rifa, mufrad, muzakkar, marfu\'',
+        ),
+        Example(
+          arabic: 'بِنْتٌ جَمِيلَةٌ',
+          transliteration: 'bintun jamīlatun',
+          translation: 'chiroyli qiz',
+          grammarNote: 'Ikkalasi: nakira, mufrad, muannas, marfu\'',
+        ),
+        Example(
+          arabic: 'فِي البَيْتِ الكَبِيرِ',
+          transliteration: 'fī al-bayti al-kabīri',
+          translation: 'katta uyda',
+          grammarNote: 'Ikkalasi majrur (kasra)',
+        ),
+      ],
+      vocabulary: const [],
+      quizzes: const [
+        Quiz(
+          question: '"اِمْرَأَةٌ ___" — Sifatni to\'g\'ri tanlang',
+          options: ['كَبِيرٌ', 'كَبِيرَةٌ', 'كِبَارٌ', 'كَبِيرَيْنِ'],
+          correctIndex: 1,
+          explanation:
+              'اِمْرَأَةٌ — muannas, demak sifati ham muannas: كَبِيرَةٌ.',
+        ),
+        Quiz(
+          question: '"الكِتَابُ ___" — Sifatni tanlang',
+          options: ['جَدِيدٌ', 'الجَدِيدُ', 'جَدِيدَةٌ', 'جَدِيدًا'],
+          correctIndex: 1,
+          explanation:
+              'الكِتَابُ — ma\'rifa, demak sifati ham الـ bilan: الجَدِيدُ.',
+        ),
+        Quiz(
+          question: 'Sifat Mavsufga necha jihatdan mos kelishi kerak?',
+          options: ['2', '3', '4', '5'],
+          correctIndex: 2,
+          explanation:
+              'Jins, son, ma\'rifa/nakira, i\'rob — 4 jihatdan mos kelishi shart.',
+        ),
+      ],
+    ),
   ];
 
   static List<Lesson> getByCategory(LessonCategory category) =>
