@@ -25,12 +25,22 @@ Mukammal arab grammatikasini (Nahv, Sarf, Tarkib) **0 dan mukammallikkacha** o'r
 
 ---
 
-## 📖 Manba kitoblar
+## 📖 Manba kitoblar (Source Materials)
 
-1. M. Hasanov — *Arab tili darslari*
-2. S. Bekpo'lat — *Mabdaun Nahv & Mabdaul Qiroat*
-3. D. N. Bodariy — *Mukammal Sarf darsligi*
-4. TIU — *Tarkib qoidalari*
+Ilovaning grammatik tushuntirishlari va misollari **aynan quyidagi kitoblardan** olingan (PDF'lar `sources/` papkasida saqlanadi, GitHub'ga yuklanmaydi):
+
+1. **M. Hasanov** — *Arab tili darslari*
+2. **S. Bekpo'lat** — *Mabdaun Nahv* (Tashkent, 2014) + *Mabdaul Qiroat*
+3. **D. N. Bodariy** — *Mukammal Sarf darsligi*
+4. **TIU** — *Tarkib qoidalari*
+
+### Hozir kitobdan aynan ko'chirilgan darslar:
+
+| Dars | Manba |
+|------|-------|
+| Mubtado va Xabar | Mabdaun Nahv, **14-§** (31-32 bet), 40-42 qoidalar |
+| Foil va Mafʼul bih | Mabdaun Nahv, **12-§** (26-bet) va **18-§** (39-40 bet), 31-34 va 51-53 qoidalar |
+| I'rob darajalari | Mabdaun Nahv, **11-§** (Ismning rafʼ o'rinlari) va **17-§** (Ismning nasb o'rinlari) |
 
 ---
 

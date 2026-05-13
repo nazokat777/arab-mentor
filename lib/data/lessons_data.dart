@@ -13,22 +13,23 @@ class LessonsData {
       level: 1,
       source: 'S. Bekpo\'lat — Mabdaun Nahv',
       theory: '''
-Arab tilida **Kalima (الكَلِمَة)** — bu ma'noli bitta so'z.
+**Kalima (الكَلِمَة)** — mustaqil ma'noli bitta so'z.
 
-Kalima 3 qismga bo'linadi:
+Arab grammatikasida Kalima **3 turga** bo'linadi (taqsimot):
 
-1. **Ism (الاِسْم)** — narsa, shaxs, joy, sifat nomi
-   Misol: كِتَابٌ (kitob), بَيْتٌ (uy)
+1. **Ism (الاِسْم)** — predmet, shaxs, hayvon, joy yoki sifat nomini bildiruvchi so'z. Zamonga bog'lanmagan.
+   Misol: كِتَابٌ (kitob), بَيْتٌ (uy), جَمِيلٌ (chiroyli)
 
-2. **Fe'l (الفِعْل)** — ish-harakat
-   Misol: كَتَبَ (yozdi), قَرَأَ (o'qidi)
+2. **Fe'l (الفِعْل)** — ish-harakat yoki holatni zamon bilan birga bildiruvchi so'z.
+   Misol: كَتَبَ (yozdi), يَكْتُبُ (yozadi), اُكْتُبْ (yoz!)
 
-3. **Harf (الحَرْف)** — yordamchi so'zlar
-   Misol: فِي (-da), مِنْ (-dan)
+3. **Harf (الحَرْف)** — o'zicha ma'noga ega bo'lmagan, faqat boshqa so'z bilan birga ma'no beruvchi yordamchi so'z.
+   Misol: فِي (-da), مِنْ (-dan), وَ (va)
 
-**Kalom (الكَلَامُ)** — bu to\'liq ma'noli gap. Eng kamida 2 kalimadan tuziladi.
+**Kalom (الكَلَامُ)** — to'liq ma'no beruvchi gap. Kamida 2 ta kalimadan tuziladi va eshituvchi to'liq xabar tushunadi.
 
 Misol: **الكِتَابُ جَدِيدٌ** — "Kitob yangi"
+(الكِتَابُ — Mubtado, جَدِيدٌ — Xabar)
 ''',
       examples: [
         Example(
@@ -95,81 +96,123 @@ Misol: **الكِتَابُ جَدِيدٌ** — "Kitob yangi"
       id: 'nahv_02',
       title: 'Mubtado va Xabar',
       arabicTitle: 'المُبْتَدَأُ وَالخَبَرُ',
-      description: 'Ismli gapning ikki asosiy bo\'lagi',
+      description: 'Jumla ismiyyaning asosiy bo\'laklari (14-§)',
       category: LessonCategory.nahv,
       level: 2,
-      source: 'S. Bekpo\'lat — Mabdaun Nahv',
+      source: 'S. Bekpo\'lat — Mabdaun Nahv, 14-§ (31-32 bet)',
       theory: '''
-**Ismli gap (الجُمْلَةُ الاِسْمِيَّةُ)** — Ismdan boshlangan gap.
+**Asos:** مُحَمَّدٌ نَشِيطٌ — "Muhammad faoldir"
 
-U 2 asosiy bo\'lakdan tashkil topadi:
+Bu yerda ikki ism birlashgan:
+- مُحَمَّدٌ — **u haqida** so'z ketmoqda
+- نَشِيطٌ — **u haqida xabar** bermoqda
 
-🟢 **Mubtado (المُبْتَدَأ)** — gap egasi, ya'ni kim/nima haqida gap ketmoqda
-   - Doim **marfu'** (دَمَّةٌ — ـُ) bo\'ladi
-   - Odatda gap boshida keladi
-   - Aniq (ma'rifa) bo\'ladi: ال bilan
+📌 **40-qoida (Mabdaun Nahv, 31-bet):**
 
-🟡 **Xabar (الخَبَر)** — Mubtado haqida xabar
-   - U ham **marfu'** bo\'ladi
-   - Mubtadodan keyin keladi
-   - Noaniq (nakira) bo\'ladi
+Ikki ismdan qo'shilib yasalgan jumlada:
+- 🟢 **Mubtado (المُبْتَدَأ)** — u haqida so'z aytilayotgan narsa (gap boshi/mavzusi). Odatda **ma'rifa** bo'ladi.
+- 🟡 **Xabar (الخَبَر)** — Mubtado haqida xabar beruvchi kalima. Odatda **nakira** bo'ladi.
 
-**Misol:**
-الكِتَابُ ← Mubtado (kitob)
-جَدِيدٌ ← Xabar (yangi)
+📌 **41-qoida — Xabar 3 turli bo'ladi:**
 
-**الكِتَابُ جَدِيدٌ** = "Kitob yangi"
+**1. Mufrad xabar** (yakka so'z):
+   مُحَمَّدٌ كَسْلَانُ — "Muhammad dangasa"
 
-💡 *Asosiy qoida:* Mubtado va Xabar **jins** va **son**da mos kelishi kerak.
+**2. Jumla bo'lib kelgan xabar:**
+   الْكَسَلُ آخِرُهُ نَدَمٌ — "Dangasalikning oxiri nadomat"
+   الْعَدْلُ يُحْسَنُ أَثَرُهُ — "Adolatning izi yaxshi bo'ladi"
+
+**3. Shibh jumla** (jarr+majrur yoki zarf):
+   بَلَاءُ الْإِنْسَانِ مِنَ اللِّسَانِ — "Insonning balosi tilidan"
+   الْحَيَّةُ تَحْتَ الْعُشْبِ — "Ilon o't ostida"
+
+📌 **42-qoida — Mosligi:**
+
+Xabar Mubtadoga **son va jins**da mos kelishi shart:
+- Muzakkar: النَّشِيطُ مَحْبُوبٌ
+- Muannas: الْمُؤَدَّبَةُ مَحْبُوبَةٌ
+- Mufrad: الْمُؤَدَّبُ مَحْبُوبٌ
+- Tasniya: الْمُؤَدَّبَانِ مَحْبُوبَانِ
+- Jam': الْمُؤَدَّبُونَ مَحْبُوبُونَ
+
+💡 **1-tanbeh:** Mubtado + Xabardan tuzilgan jumla — **"jumlai ismiyya"** deb ataladi.
+
+💡 **2-tanbeh:** "Shibh jumla" — bu jarr (kasra o'qituvchi) harf kirgan yoki zarf (zamon/makon) bo'lgan ismga aytiladi.
 ''',
       examples: [
         Example(
-          arabic: 'البَيْتُ كَبِيرٌ',
-          transliteration: 'al-baytu kabīrun',
-          translation: 'Uy katta',
-          grammarNote: 'البَيْتُ — Mubtado, كَبِيرٌ — Xabar',
+          arabic: 'مُحَمَّدٌ نَشِيطٌ',
+          transliteration: 'muḥammadun nashīṭun',
+          translation: 'Muhammad faoldir',
+          grammarNote: 'Asosiy misol (Mabdaun Nahv, 14-§). Mufrad xabar.',
         ),
         Example(
-          arabic: 'الطَّالِبُ مُجْتَهِدٌ',
-          transliteration: 'aṭ-ṭālibu mujtahidun',
-          translation: 'Talaba tirishqoq',
-          grammarNote: 'الطَّالِبُ — Mubtado, مُجْتَهِدٌ — Xabar',
+          arabic: 'الْكَسَلُ آخِرُهُ نَدَمٌ',
+          transliteration: 'al-kasalu ākhiruhu nadamun',
+          translation: 'Dangasalikning oxiri nadomat',
+          grammarNote: 'Xabar jumla shaklida (jumla ismiyya).',
         ),
         Example(
-          arabic: 'القَلَمُ جَدِيدٌ',
-          transliteration: 'al-qalamu jadīdun',
-          translation: 'Qalam yangi',
+          arabic: 'بَلَاءُ الْإِنْسَانِ مِنَ اللِّسَانِ',
+          transliteration: 'balāʾu al-insāni mina al-lisāni',
+          translation: 'Insonning balosi tilidan',
+          grammarNote: 'Xabar shibh jumla (jarr + majrur).',
         ),
         Example(
-          arabic: 'المُعَلِّمَةُ جَمِيلَةٌ',
-          transliteration: 'al-muʿallimatu jamīlatun',
-          translation: 'O\'qituvchi (ayol) chiroyli',
-          grammarNote: 'Jinsi mos: ikkalasi ham muannas (ayol jinsi)',
+          arabic: 'الْمُؤَدَّبَانِ مَحْبُوبَانِ',
+          transliteration: 'al-muʾaddabāni maḥbūbāni',
+          translation: 'Ikki tarbiyali sevimlidir',
+          grammarNote: 'Tasniya mosligi — ikkalasi ham ـَانِ shaklda.',
         ),
       ],
       vocabulary: Vocabulary.beginnerWords.where((w) => w.type == WordType.adjective).toList(),
       quizzes: const [
         Quiz(
-          question: '"البَيْتُ كَبِيرٌ" gapida Mubtado qaysi?',
-          arabicSentence: 'البَيْتُ كَبِيرٌ',
-          options: ['البَيْتُ', 'كَبِيرٌ', 'ikkalasi', 'hech qaysi'],
+          question: '"مُحَمَّدٌ نَشِيطٌ" gapida Mubtado qaysi?',
+          arabicSentence: 'مُحَمَّدٌ نَشِيطٌ',
+          options: ['مُحَمَّدٌ', 'نَشِيطٌ', 'ikkalasi', 'hech qaysi'],
           correctIndex: 0,
           explanation:
-              'البَيْتُ — gap egasi, ya'ni kim haqida gap ketmoqda. Bu Mubtado.',
+              'مُحَمَّدٌ — u haqida so\'z ketayotgan kishi. Demak Mubtado (Mabdaun Nahv 40-qoida).',
         ),
         Quiz(
-          question: 'Mubtado qanday harakat bilan keladi?',
-          options: ['Fatha (ـَ)', 'Kasra (ـِ)', 'Damma (ـُ)', 'Sukun (ـْ)'],
+          question: '"الْحَيَّةُ تَحْتَ الْعُشْبِ" — Xabar qaysi turdan?',
+          arabicSentence: 'الْحَيَّةُ تَحْتَ الْعُشْبِ',
+          options: ['Mufrad', 'Jumla', 'Shibh jumla', 'Hech qaysi'],
           correctIndex: 2,
           explanation:
-              'Mubtado doim marfu\' bo\'ladi, ya\'ni damma (ـُ) bilan o\'qiladi.',
+              'تَحْتَ — zarf, الْعُشْبِ — majrur. Zarf + ism = Shibh jumla (41-qoida).',
         ),
         Quiz(
-          question: '"القَلَمُ ___" — Xabarni to\'g\'ri tanlang',
-          options: ['جَدِيدٌ', 'جَدِيدَةٌ', 'جَدِيدِينَ', 'جَدِيدًا'],
-          correctIndex: 0,
+          question: 'Mubtado odatda qaysi holatda bo\'ladi?',
+          options: ['Nakira', 'Ma\'rifa', 'Farqi yo\'q', 'Doim ma\'rifa'],
+          correctIndex: 1,
           explanation:
-              'القَلَم — muzakkar (erkak jinsi), shuning uchun Xabar ham muzakkar shaklda — جَدِيدٌ.',
+              'Mabdaun Nahv 40-qoida: "Odatda mubtado ma\'rifa bo\'ladi". Xabar esa odatda nakira.',
+        ),
+        Quiz(
+          question: 'Mubtado + Xabardan tuzilgan jumla nima deyiladi?',
+          options: [
+            'Jumlai fi\'liyya',
+            'Jumlai ismiyya',
+            'Shibh jumla',
+            'Jumla munodo',
+          ],
+          correctIndex: 1,
+          explanation:
+              'Mabdaun Nahv 1-tanbeh: "Mubtado bilan xabardan murakkab bo\'lgan jumla jumlai ismiyya deb ataladi".',
+        ),
+        Quiz(
+          question: '"الْمُؤَدَّبَةُ ___" — to\'g\'ri xabarni tanlang',
+          options: [
+            'مَحْبُوبٌ',
+            'مَحْبُوبَةٌ',
+            'مَحْبُوبُونَ',
+            'مَحْبُوبَاتٌ',
+          ],
+          correctIndex: 1,
+          explanation:
+              'Mubtado muannas (ة bilan). Xabar ham muannas bo\'lishi shart — مَحْبُوبَةٌ.',
         ),
       ],
     ),
@@ -313,80 +356,141 @@ Arab tilida ism son jihatidan **3 ga bo\'linadi**:
     ),
     Lesson(
       id: 'tarkib_01',
-      title: 'Gap turlari: Ismli va Fe\'lli',
-      arabicTitle: 'الجُمْلَةُ الاِسْمِيَّةُ وَالفِعْلِيَّةُ',
-      description: 'Arab tilidagi 2 asosiy gap turi',
+      title: 'Foil va Mafʼulum Bih',
+      arabicTitle: 'الفَاعِلُ وَالمَفْعُولُ بِهِ',
+      description: 'Fe\'lli gapning asosiy bo\'laklari (12-§ va 18-§)',
       category: LessonCategory.tarkib,
       level: 2,
-      source: 'TIU — Tarkib qoidalari',
+      source: 'S. Bekpo\'lat — Mabdaun Nahv, 12-§ (26-bet) va 18-§ (40-bet)',
       theory: '''
-Arab tilida gap **2 turga** bo\'linadi:
+**Fe\'lli gap (الجُمْلَةُ الفِعْلِيَّةُ)** Fe\'l bilan boshlanadi va asosan **3 bo\'lakdan** iborat: Fe\'l + Foil + Mafʼul bih.
 
-📘 **1. Ismli gap (الجُمْلَةُ الاِسْمِيَّةُ)**
-   - **Ism**dan boshlanadi
-   - Tarkibi: Mubtado + Xabar
-   - Misol: الكِتَابُ جَدِيدٌ (Kitob yangi)
+📌 **31-qoida — Foil (الفَاعِل):**
 
-📗 **2. Fe\'lli gap (الجُمْلَةُ الفِعْلِيَّةُ)**
-   - **Fe\'l**dan boshlanadi
-   - Tarkibi: Fe\'l + Foil (+ Maf\'ul bih)
-   - Misol: كَتَبَ الطَّالِبُ الدَّرْسَ
-            (Talaba darsni yozdi)
+Foil — **maʼlum fe\'ldan** so'ng kelib, shu fe'lni ishlagan **kishi yoki narsa**ni ko'rsatadigan, "kim?" yoki "nima?" so'rog'iga javob bo'lgan ismdir. Foil **marfu'** (damma) bo'ladi.
 
-**Fe\'lli gap bo\'laklari:**
+Misollar:
+- لَعِبَ الْوَلَدُ — "Bola o'ynadi"
+- دَقَّتِ السَّاعَةُ — "Soat jiringladi"
 
-🔹 **Fe\'l (الفِعْل)** — ish-harakat
-🔹 **Foil (الفَاعِل)** — ish bajaruvchi (kim?) — **marfu\'**
-🔹 **Maf\'ul bih (المَفْعُولُ بِهِ)** — ish ob\'ekti (nimani?) — **mansub**
+📌 **32-qoida:** Foil shaklan **7 turli** bo'lishi mumkin:
+- Muzakkar / Muannas
+- Mufrad / Tasniya / Jam'
+- Ism zohir / Ism zamir
 
-**Tahlil namunasi:**
-كَتَبَ ← Fe\'l (yozdi)
-الطَّالِبُ ← Foil (talaba — marfu\')
-الدَّرْسَ ← Maf\'ul bih (darsni — mansub)
+📌 **33-qoida — Jins mosligi:**
+
+- Foil muzakkar bo'lsa, Fe'l ham muzakkar bo'ladi
+- Foil muannas bo'lsa, Fe'l ham muannas bo'ladi
+- Misol: قَعَدَ مُحَمَّدٌ / قَامَتْ فَاطِمَةُ
+
+📌 **34-qoida — Fe'l Foildan oldin kelganda:**
+
+Foil mufrad / tasniya / jam' bo'lishidan qat'iy nazar Fe'l **mufrad** holicha qoladi:
+- قَامَ الْمُعَلِّمُ
+- قَامَ الْمُعَلِّمَانِ
+- قَامَ الْمُعَلِّمُونَ
+
+➖ ➖ ➖
+
+📌 **51-qoida — Mafʼulum Bih (المَفْعُولُ بِهِ):**
+
+Mafʼul bih — Foilning fe'li **uning ustida bajarilgan kishi yoki narsa**. Aniqroq: **bajarilmish ish** mafʼul bih bo'ladi. **Mansub** (fatha) bo'ladi.
+
+Misollar:
+- ضَرَبَ مُحَمَّدٌ فَرِيدًا — "Muhammad Faridni urdi"
+- كَسَرَ سَلِيمٌ الْقَلَمَ — "Salim qalamni sindirdi"
+
+📌 **52-qoida:** Mafʼul bih ham Foil kabi 7 turli bo'lishi mumkin.
+
+📌 **53-qoida:** Bir fe'lning **1 dan 3 tagacha** mafʼuli bo'lishi mumkin.
 ''',
       examples: [
         Example(
-          arabic: 'قَرَأَ المُعَلِّمُ الكِتَابَ',
-          transliteration: 'qaraʾa al-muʿallimu al-kitāba',
-          translation: 'O\'qituvchi kitobni o\'qidi',
-          grammarNote: 'Fe\'l + Foil (marfu\') + Maf\'ul bih (mansub)',
+          arabic: 'لَعِبَ الْوَلَدُ',
+          transliteration: 'laʿiba al-waladu',
+          translation: 'Bola o\'ynadi',
+          grammarNote:
+              'Mabdaun Nahv 31-qoidaning asosiy misoli. الْوَلَدُ — Foil (marfu\').',
         ),
         Example(
-          arabic: 'ذَهَبَ الطَّالِبُ إِلَى المَدْرَسَةِ',
-          transliteration: 'dhahaba aṭ-ṭālibu ilā al-madrasati',
-          translation: 'Talaba maktabga bordi',
+          arabic: 'دَقَّتِ السَّاعَةُ',
+          transliteration: 'daqqati as-sāʿatu',
+          translation: 'Soat jiringladi',
+          grammarNote:
+              'Mabdaun Nahv 31-qoidaning ikkinchi asosiy misoli. السَّاعَةُ — Foil (muannas).',
         ),
         Example(
-          arabic: 'البَيْتُ جَمِيلٌ',
-          transliteration: 'al-baytu jamīlun',
-          translation: 'Uy chiroyli',
-          grammarNote: 'Ismli gap: Mubtado + Xabar',
+          arabic: 'ضَرَبَ مُحَمَّدٌ فَرِيدًا',
+          transliteration: 'ḍaraba muḥammadun farīdan',
+          translation: 'Muhammad Faridni urdi',
+          grammarNote:
+              'Mabdaun Nahv 51-qoidasi. فَرِيدًا — Mafʼul bih (fatha bilan mansub).',
+        ),
+        Example(
+          arabic: 'كَسَرَ سَلِيمٌ الْقَلَمَ',
+          transliteration: 'kasara salīmun al-qalama',
+          translation: 'Salim qalamni sindirdi',
+          grammarNote:
+              'Mabdaun Nahv 51-qoidasi. الْقَلَمَ — Mafʼul bih (fatha bilan).',
         ),
       ],
       vocabulary: Vocabulary.beginnerWords.where((w) => w.type == WordType.verb).toList(),
       quizzes: const [
         Quiz(
           question:
-              '"كَتَبَ الطَّالِبُ الدَّرْسَ" — bu qaysi turdagi gap?',
-          arabicSentence: 'كَتَبَ الطَّالِبُ الدَّرْسَ',
-          options: ['Ismli gap', 'Fe\'lli gap', 'Aniq emas', 'Ikkalasi'],
-          correctIndex: 1,
+              '"ضَرَبَ مُحَمَّدٌ فَرِيدًا" gapida Mafʼul bih qaysi?',
+          arabicSentence: 'ضَرَبَ مُحَمَّدٌ فَرِيدًا',
+          options: ['ضَرَبَ', 'مُحَمَّدٌ', 'فَرِيدًا', 'hech qaysi'],
+          correctIndex: 2,
           explanation:
-              'Fe\'l (كَتَبَ) bilan boshlangan, demak — Fe\'lli gap.',
+              'فَرِيدًا — urilgan kishi (bajarilmish ish ustida bo\'lgan). Fatha bilan mansub — Mafʼul bih.',
         ),
         Quiz(
-          question: 'Foil (الفَاعِل) qanday harakat bilan keladi?',
+          question: 'Foil qaysi harakat bilan keladi?',
           options: ['Marfu\' (ـُ)', 'Mansub (ـَ)', 'Majrur (ـِ)', 'Sukun'],
           correctIndex: 0,
-          explanation: 'Foil doim marfu\' bo\'ladi — damma (ـُ) bilan.',
+          explanation:
+              'Mabdaun Nahv 31-qoida: Foil maʼlum fe\'ldan so\'ng kelib doim marfu\' bo\'ladi.',
         ),
         Quiz(
           question:
-              '"قَرَأَ ___ الكِتَابَ" — Foilni to\'g\'ri shaklda tanlang',
-          options: ['الطَّالِبُ', 'الطَّالِبَ', 'الطَّالِبِ', 'طَالِبٍ'],
+              '"قَامَ ___" — Foilni to\'g\'ri shaklda tanlang',
+          options: [
+            'الْمُعَلِّمُ',
+            'الْمُعَلِّمَ',
+            'الْمُعَلِّمِ',
+            'مُعَلِّمٍ'
+          ],
           correctIndex: 0,
           explanation:
-              'Foil marfu\' bo\'lishi kerak: الطَّالِبُ (damma bilan).',
+              'Foil marfu\' bo\'lishi kerak: الْمُعَلِّمُ (damma bilan). 33-qoida.',
+        ),
+        Quiz(
+          question:
+              'Fe\'l Foildan oldin kelsa, Foil jam\' bo\'lganda Fe\'l qaysi shaklda qoladi?',
+          options: [
+            'Foilga mos (jam\' bo\'ladi)',
+            'Mufrad holicha qoladi',
+            'Tasniya bo\'ladi',
+            'O\'zgaradi har vaqt',
+          ],
+          correctIndex: 1,
+          explanation:
+              'Mabdaun Nahv 34-qoida: قَامَ الْمُعَلِّمُونَ — Fe\'l mufrad qoladi.',
+        ),
+        Quiz(
+          question:
+              'Foil muannas bo\'lsa Fe\'l qanday bo\'ladi?',
+          options: [
+            'Muzakkar qoladi',
+            'Muannas bo\'ladi',
+            'Farqi yo\'q',
+            'Mufrad bo\'ladi',
+          ],
+          correctIndex: 1,
+          explanation:
+              'Mabdaun Nahv 33-qoida: قَامَتْ فَاطِمَةُ — Foil muannas → Fe\'l ham muannas (تْ qo\'shimchasi).',
         ),
       ],
     ),

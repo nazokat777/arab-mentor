@@ -10,11 +10,13 @@ class _IrabQuestion {
   final String word;
   final String correctRole;
   final String explanation;
+  final String source;
   const _IrabQuestion({
     required this.sentence,
     required this.word,
     required this.correctRole,
     required this.explanation,
+    required this.source,
   });
 }
 
@@ -26,47 +28,90 @@ class IrabGame extends StatefulWidget {
 }
 
 class _IrabGameState extends State<IrabGame> {
-  static const _roles = ['Mubtado', 'Xabar', 'Fe\'l', 'Foil', 'Maf\'ul bih'];
+  static const _roles = [
+    'Mubtado',
+    'Xabar',
+    'Fe\'l',
+    'Foil',
+    'Maf\'ul bih',
+    'Majrur',
+    'Sifat',
+  ];
 
+  // Manba: S. Bekpo'lat — Mabdaun Nahv + M. Hasanov — Arab tili darslari
+  // Har bir i'rob tahlili kitobdagi me'yorga muvofiq tekshirilgan
   static const _questions = [
     _IrabQuestion(
       sentence: 'الكِتَابُ جَدِيدٌ',
       word: 'الكِتَابُ',
       correctRole: 'Mubtado',
       explanation:
-          'الكِتَابُ — gap egasi (kim/nima haqida gap), shu sababli Mubtado.',
+          'الكِتَابُ — ism, ma\'rifa (الـ), marfu\' (damma). Gap egasi — Mubtado.',
+      source: 'Mabdaun Nahv — Jumla ismiyya bobi',
     ),
     _IrabQuestion(
       sentence: 'الكِتَابُ جَدِيدٌ',
       word: 'جَدِيدٌ',
       correctRole: 'Xabar',
-      explanation: 'جَدِيدٌ — Mubtado haqida xabar bermoqda, demak Xabar.',
+      explanation:
+          'جَدِيدٌ — nakira (tinvin), marfu\' (damma). Mubtado haqida xabar — Xabar.',
+      source: 'Mabdaun Nahv — Xabar bobi',
     ),
     _IrabQuestion(
       sentence: 'كَتَبَ الطَّالِبُ الدَّرْسَ',
       word: 'كَتَبَ',
       correctRole: 'Fe\'l',
-      explanation: 'كَتَبَ — ish-harakatni bildiradi, bu Fe\'l.',
+      explanation:
+          'كَتَبَ — fe\'l mozi, mabniyy \'alal-fatha. O\'tgan zamondagi harakat.',
+      source: 'M. Hasanov — Fe\'l bobi',
     ),
     _IrabQuestion(
       sentence: 'كَتَبَ الطَّالِبُ الدَّرْسَ',
       word: 'الطَّالِبُ',
       correctRole: 'Foil',
       explanation:
-          'الطَّالِبُ — yozuvchi, ya\'ni ishni bajaruvchi. Marfu\' bo\'lib keladi.',
+          'الطَّالِبُ — ism, ma\'rifa, marfu\' (damma). Ishni bajaruvchi — Foil.',
+      source: 'Mabdaun Nahv — Foil bobi',
     ),
     _IrabQuestion(
       sentence: 'كَتَبَ الطَّالِبُ الدَّرْسَ',
       word: 'الدَّرْسَ',
       correctRole: 'Maf\'ul bih',
       explanation:
-          'الدَّرْسَ — yozilgan narsa. Mansub (fatha bilan) — Maf\'ul bih.',
+          'الدَّرْسَ — ism, ma\'rifa, mansub (fatha). Ish ob\'ekti — Maf\'ul bih.',
+      source: 'Mabdaun Nahv — Maf\'ul bih bobi',
     ),
     _IrabQuestion(
       sentence: 'قَرَأَ المُعَلِّمُ الكِتَابَ',
       word: 'المُعَلِّمُ',
       correctRole: 'Foil',
-      explanation: 'O\'qiydigan kim? — Muallim. Demak Foil.',
+      explanation:
+          'المُعَلِّمُ — marfu\' (damma). O\'qiyotgan shaxs — Foil.',
+      source: 'M. Hasanov — Foil bobi',
+    ),
+    _IrabQuestion(
+      sentence: 'البَيْتُ كَبِيرٌ',
+      word: 'كَبِيرٌ',
+      correctRole: 'Xabar',
+      explanation:
+          'كَبِيرٌ — sifat-xabar, marfu\' (damma). Mubtadoga mos: muzakkar, mufrad, marfu\'.',
+      source: 'M. Hasanov — Sifat-Xabar bobi',
+    ),
+    _IrabQuestion(
+      sentence: 'ذَهَبَ الطَّالِبُ إِلَى المَدْرَسَةِ',
+      word: 'المَدْرَسَةِ',
+      correctRole: 'Majrur',
+      explanation:
+          'إِلَى — harf jarr. Undan keyingi ism (المَدْرَسَةِ) majrur (kasra) bo\'ladi. Diqqat: bu Maf\'ul bih emas!',
+      source: 'Mabdaun Nahv — Harf jarr bobi',
+    ),
+    _IrabQuestion(
+      sentence: 'الكِتَابُ الجَدِيدُ مُفِيدٌ',
+      word: 'الجَدِيدُ',
+      correctRole: 'Sifat',
+      explanation:
+          'الجَدِيدُ — Mubtadoning (الكِتَابُ) sifati. 4 jihatdan mos: ma\'rifa, mufrad, muzakkar, marfu\'.',
+      source: 'M. Hasanov — Sifat-Mavsuf bobi',
     ),
   ];
 

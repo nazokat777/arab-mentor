@@ -10,7 +10,8 @@ import '../../widgets/geometric_pattern.dart';
 class _Puzzle {
   final List<String> words;
   final String translation;
-  const _Puzzle(this.words, this.translation);
+  final String source;
+  const _Puzzle(this.words, this.translation, this.source);
 }
 
 class SentenceBuilderGame extends StatefulWidget {
@@ -23,15 +24,54 @@ class SentenceBuilderGame extends StatefulWidget {
 class _SentenceBuilderGameState extends State<SentenceBuilderGame> {
   final _audio = AudioService();
 
+  // Manba: M. Hasanov "Arab tili darslari" + S. Bekpo'lat "Mabdaun Nahv"
+  // E'rob va tarkib aniqligi tekshirilgan
   static const _puzzles = [
-    _Puzzle(['الكِتَابُ', 'جَدِيدٌ'], 'Kitob yangi'),
-    _Puzzle(['الطَّالِبُ', 'مُجْتَهِدٌ'], 'Talaba tirishqoq'),
-    _Puzzle(['كَتَبَ', 'الطَّالِبُ', 'الدَّرْسَ'], 'Talaba darsni yozdi'),
+    // === Jumla ismiyya (Mubtado + Xabar) ===
+    // الكِتَابُ (Mubtado: marfu', damma) + جَدِيدٌ (Xabar: marfu', damma)
+    _Puzzle(['الكِتَابُ', 'جَدِيدٌ'], 'Kitob yangidir',
+        'M. Hasanov — Jumla ismiyya bobi'),
+
+    // الطَّالِبُ (Mubtado: marfu') + مُجْتَهِدٌ (Xabar: marfu')
+    _Puzzle(['الطَّالِبُ', 'مُجْتَهِدٌ'], 'Talaba tirishqoqdir',
+        'M. Hasanov — Mubtado-Xabar mosligi'),
+
+    // البَيْتُ (Mubtado) + كَبِيرٌ (Xabar): muzakkar, mufrad, marfu'
+    _Puzzle(['البَيْتُ', 'كَبِيرٌ'], 'Uy kattadir',
+        'M. Hasanov — Xabar mosligi'),
+
+    // المُعَلِّمَةُ (muannas Mubtado) + جَمِيلَةٌ (muannas Xabar — ة bilan)
+    _Puzzle(['المُعَلِّمَةُ', 'جَمِيلَةٌ'], 'Muallima chiroylidir',
+        'M. Hasanov — Muannas-muannas mosligi'),
+
+    // === Jumla fi'liyya (Fe'l + Foil + Maf'ul bih) ===
+    // كَتَبَ (Fe'l mozi) + الطَّالِبُ (Foil: marfu') + الدَّرْسَ (Maf'ul bih: mansub)
+    _Puzzle(['كَتَبَ', 'الطَّالِبُ', 'الدَّرْسَ'],
+        'Talaba darsni yozdi',
+        'Mabdaun Nahv — Fe\'l + Foil + Maf\'ul bih'),
+
+    // قَرَأَ (Fe'l) + المُعَلِّمُ (Foil) + الكِتَابَ (Maf'ul bih)
     _Puzzle(['قَرَأَ', 'المُعَلِّمُ', 'الكِتَابَ'],
-        'O\'qituvchi kitobni o\'qidi'),
-    _Puzzle(['البَيْتُ', 'كَبِيرٌ'], 'Uy katta'),
+        'Muallim kitobni o\'qidi',
+        'Mabdaun Nahv — Maf\'ul bih bobi'),
+
+    // === Harf jarr bilan (Jarr + Majrur) ===
+    // ذَهَبَ (Fe'l) + الطَّالِبُ (Foil) + إِلَى (Harf jarr) + المَدْرَسَةِ (Majrur: kasra)
     _Puzzle(['ذَهَبَ', 'الطَّالِبُ', 'إِلَى', 'المَدْرَسَةِ'],
-        'Talaba maktabga bordi'),
+        'Talaba maktabga bordi',
+        'Mabdaun Nahv — Harf jarr bobi'),
+
+    // الكِتَابُ (Mubtado) + عَلَى (Harf jarr) + المَكْتَبِ (Majrur)
+    // "Jarr va majrur" Xabar o'rnida (mahallan marfu')
+    _Puzzle(['الكِتَابُ', 'عَلَى', 'المَكْتَبِ'],
+        'Kitob yozuv stoli ustidadir',
+        'M. Hasanov — Jarr+Majrur Xabar o\'rnida'),
+
+    // === Izafat ===
+    // كِتَابُ (Muzof: marfu' — Mubtado) + الطَّالِبِ (Muzof ilayh: majrur) + جَدِيدٌ (Xabar: marfu')
+    _Puzzle(['كِتَابُ', 'الطَّالِبِ', 'جَدِيدٌ'],
+        'Talabaning kitobi yangidir',
+        'Mabdaun Nahv — Izafat (idafa) bobi'),
   ];
 
   int _index = 0;
@@ -238,28 +278,51 @@ class _SentenceBuilderGameState extends State<SentenceBuilderGame> {
             .withOpacity(0.1),
         borderRadius: BorderRadius.circular(12),
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Icon(correct ? Icons.check_circle : Icons.cancel,
-              color: correct ? AppColors.emerald : AppColors.deepRed),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Text(
-              correct
-                  ? 'Zo\'r! +10 XP'
-                  : 'To\'g\'ri javob: ${puzzle.words.join(" ")}',
-              style: TextStyle(
-                color: correct ? AppColors.emerald : AppColors.deepRed,
-                fontWeight: FontWeight.bold,
+          Row(
+            children: [
+              Icon(correct ? Icons.check_circle : Icons.cancel,
+                  color: correct ? AppColors.emerald : AppColors.deepRed),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  correct
+                      ? 'Zo\'r! +10 XP'
+                      : 'To\'g\'ri javob: ${puzzle.words.join(" ")}',
+                  style: TextStyle(
+                    color: correct ? AppColors.emerald : AppColors.deepRed,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textDirection: TextDirection.rtl,
+                  textAlign: TextAlign.right,
+                ),
               ),
-              textDirection: TextDirection.rtl,
-              textAlign: TextAlign.right,
-            ),
+              IconButton(
+                icon: const Icon(Icons.volume_up),
+                color: AppColors.emerald,
+                onPressed: () => _audio.speak(puzzle.words.join(' ')),
+              ),
+            ],
           ),
-          IconButton(
-            icon: const Icon(Icons.volume_up),
-            color: AppColors.emerald,
-            onPressed: () => _audio.speak(puzzle.words.join(' ')),
+          const SizedBox(height: 6),
+          Row(
+            children: [
+              Icon(Icons.menu_book,
+                  size: 14, color: AppColors.softBrown.withOpacity(0.7)),
+              const SizedBox(width: 4),
+              Expanded(
+                child: Text(
+                  'Manba: ${puzzle.source}',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontStyle: FontStyle.italic,
+                    color: AppColors.softBrown.withOpacity(0.8),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),

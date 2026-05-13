@@ -6,6 +6,8 @@ import '../widgets/geometric_pattern.dart';
 import 'games/word_match_game.dart';
 import 'games/sentence_builder_game.dart';
 import 'games/irab_game.dart';
+import 'games/word_search_game.dart';
+import 'games/quran_analysis_game.dart';
 
 class GamesScreen extends StatelessWidget {
   const GamesScreen({super.key});
@@ -62,6 +64,28 @@ class GamesScreen extends StatelessWidget {
                   colors: [Color(0xFF8B2331), Color(0xFFB85450)],
                 ),
                 onTap: () => _open(context, const IrabGame()),
+              ),
+              const SizedBox(height: 12),
+              _GameCard(
+                emoji: '🔍',
+                title: 'So\'z topish',
+                subtitle: 'Arabcha so\'zlarni gridda topish',
+                difficulty: 'O\'rta',
+                gradient: const LinearGradient(
+                  colors: [Color(0xFF6B4423), Color(0xFFA67B5B)],
+                ),
+                onTap: () => _open(context, const WordSearchGame()),
+              ),
+              const SizedBox(height: 12),
+              _GameCard(
+                emoji: '📖',
+                title: 'Qur\'on tahlili',
+                subtitle: 'Oyatlardagi so\'zlarning i\'robini topish',
+                difficulty: 'Yuqori',
+                gradient: const LinearGradient(
+                  colors: [Color(0xFF1B4332), Color(0xFFD4A574)],
+                ),
+                onTap: () => _open(context, const QuranAnalysisGame()),
               ),
             ],
           ),

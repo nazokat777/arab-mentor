@@ -8,6 +8,7 @@ import '../theme/app_theme.dart';
 import '../widgets/geometric_pattern.dart';
 import '../widgets/stat_widgets.dart';
 import 'settings_screen.dart';
+import 'achievements_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -36,6 +37,15 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
                   Expanded(child: Text('Profil', style: AppTheme.uzbekTitle)),
+                  IconButton(
+                    icon: const Icon(Icons.emoji_events, color: AppColors.gold),
+                    tooltip: 'Yutuqlar',
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => const AchievementsScreen()),
+                    ),
+                  ),
                   IconButton(
                     icon: const Icon(Icons.settings, color: AppColors.emerald),
                     onPressed: () => Navigator.push(

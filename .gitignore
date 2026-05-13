@@ -94,3 +94,7 @@ lib/generated_plugin_registrant.dart
 
 # Coverage
 coverage/
+
+# Source PDF books (private content — not for GitHub)
+sources/
+*.pdf
