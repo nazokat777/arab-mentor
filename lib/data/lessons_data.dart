@@ -719,42 +719,53 @@ Arab tilida fe'l **3 zamonga** bo'linadi, lekin asosan 2 tasi:
     ),
     Lesson(
       id: 'tarkib_02',
-      title: 'I\'rob darajalari',
-      arabicTitle: 'حَرَكَاتُ الإِعْرَابِ',
-      description: 'Marfu\', Mansub, Majrur, Majzum',
+      title: 'Ismning Rafʼ va Nasb O\'rinlari',
+      arabicTitle: 'مَحَلُّ رَفْعِ الإِسْمِ وَنَصْبِهِ',
+      description: 'Ism qayerda marfu\', qayerda mansub bo\'ladi (11-§, 17-§)',
       category: LessonCategory.tarkib,
       level: 3,
-      source: 'TIU — Tarkib qoidalari',
+      source: 'S. Bekpo\'lat — Mabdaun Nahv, 11-§ (25-26 bet) va 17-§ (39-bet)',
       theory: '''
-**I'rob (الإِعْرَاب)** — so'z oxiridagi harakatning gapdagi rolga qarab o'zgarishi.
+📌 **28-qoida (Mabdaun Nahv, 25-bet):**
 
-**4 ta asosiy holat:**
+Ism **6 ta o'rinda marfuʼ** bo'ladi:
 
-🟢 **1. Marfu' (المَرْفُوع)** — damma (ـُ)
-   - **Kim ish bajaradi:** Mubtado, Xabar, Foil
-   - Misol: **الطَّالِبُ** (talaba — kim?)
+1. **Foʼil** (الفَاعِل) — ish bajaruvchi
+2. **Noibi foʼil** (نَائِبُ الفَاعِل) — foilning o'rnida turuvchi
+3. **Mubtado** (المُبْتَدَأ) — jumla boshi
+4. **Xabar** (الخَبَر) — Mubtado haqida xabar
+5. **«Kana» va axavotining ismi** (afʼolu noqisa)
+6. **«Inna» va axavotining xabari** (huruf mushabbaha bil-feʼl)
 
-🟡 **2. Mansub (المَنْصُوب)** — fatha (ـَ)
-   - **Kim/nimani:** Maf'ul bih (ob'ekt)
-   - Misol: **الكِتَابَ** (kitobni — nimani?)
+💡 *Tanbeh:* Tavobeʼ (ergashuvchilar — sifat, ʼatf, badal, ʼaqid) bilan **7 xil** bo'ladi.
 
-🔴 **3. Majrur (المَجْرُور)** — kasra (ـِ)
-   - **Harf jarr bilan** yoki **Muzof ilayh**
-   - Misol: **فِي البَيْتِ** (uyda)
+📌 **29-qoida — «Kana»ning axavoti** (16 ta fe'l):
 
-⚫ **4. Majzum (المَجْزُوم)** — sukun (ـْ)
-   - Faqat **fe'l muzore'**da (لَمْ, لَا nahy)
-   - Misol: **لَمْ يَكْتُبْ** (yozmadi)
+كَانَ، أَصْبَحَ، أَضْحَى، ظَلَّ، بَاتَ، أَمْسَى، مَا زَالَ، مَا بَرِحَ، مَا انْفَكَّ، مَا فَتِئَ، مَا دَامَ، صَارَ، لَيْسَ
 
-**Tahlil namunasi:**
-> كَتَبَ الطَّالِبُ الدَّرْسَ فِي البَيْتِ
+📌 **30-qoida — «Inna»ning axavoti** (6 ta harf):
 
-| So'z | Rol | I'rob |
-|------|-----|-------|
-| كَتَبَ | Fe'l | — |
-| الطَّالِبُ | Foil | Marfu' (ـُ) |
-| الدَّرْسَ | Maf'ul bih | Mansub (ـَ) |
-| البَيْتِ | Majrur (harf jarr keyin) | Majrur (ـِ) |
+إِنَّ، أَنَّ، كَأَنَّ، لَكِنَّ، لَيْتَ، لَعَلَّ
+
+➖ ➖ ➖
+
+📌 **50-qoida (17-§, 39-bet):**
+
+Ism **11 ta o'rinda mansub** bo'ladi:
+
+1. **Mafʼulum bih** (المَفْعُولُ بِهِ) — ish ob'ekti
+2. **Mafʼulum mutlaq** — ish ta'kidi
+3. **Mafʼulul liajlihi** — ish sababi
+4. **Mafʼulum fiyhi** (zarf) — zamon/makon
+5. **Mafʼulum maʼah** — ish hamrohi
+6. **Mustasno** — istisno
+7. **Hol** — holat
+8. **Tamyiz** — tafsil
+9. **Munodo** — chaqiriq
+10. **Kana va axavotining xabari**
+11. **Inna va axavotining ismi**
+
+💡 *Tanbeh:* Tavobeʼ bilan **12 xil** bo'ladi.
 ''',
       examples: [
         Example(
